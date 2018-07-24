@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Regression Suite" duration-ms="61472" started-at="2018-07-23T20:30:53Z" finished-at="2018-07-23T20:31:55Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="61472" started-at="2018-07-23T20:30:53Z" finished-at="2018-07-23T20:31:55Z">
+      <class name="com.cottonon.testcases.SignMeInPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.cottonon.testcases.SignMeInPageTest@1f28c152]" name="setUp" is-config="true" duration-ms="43871" started-at="2018-07-23T20:30:53Z" finished-at="2018-07-23T20:31:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.cottonon.testcases.SignMeInPageTest@1f28c152]" name="testLogin" duration-ms="14683" started-at="2018-07-23T20:31:38Z" data-provider="logindata" finished-at="2018-07-23T20:31:53Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[sadhusahab@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[sadhusahab1]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[y]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogin -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.cottonon.testcases.SignMeInPageTest@1f28c152]" name="tearDown" is-config="true" duration-ms="2131" started-at="2018-07-23T20:31:53Z" finished-at="2018-07-23T20:31:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.cottonon.testcases.SignMeInPageTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Regression Suite -->
+</testng-results>

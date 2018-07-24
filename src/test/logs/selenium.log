@@ -1,0 +1,7 @@
+02:00:53,941 DEBUG TestBase:36 - congig file loaded
+02:01:03,332 DEBUG TestBase:45 - chrome launched
+02:01:03,333  INFO TestBase:67 - your cottonon shopping site is opening
+02:01:36,417 DEBUG TestBase:69 - new url is opening
+02:01:37,724 DEBUG TestBase:71 - window is maximizing
+02:01:38,502  INFO SignMeInPageTest:49 - =========Starting verification with different records======
+02:01:53,180  INFO SignMeInPageTest:59 - =========Ending of verification with different records======
