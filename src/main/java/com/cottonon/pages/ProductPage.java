@@ -6,15 +6,16 @@ import java.util.Iterator;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 //import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 import com.cottonon.base.TestBase;
-
-import junit.framework.Assert;
 
 public class ProductPage extends TestBase{
 	
@@ -22,7 +23,8 @@ public class ProductPage extends TestBase{
 	@FindBy(xpath="//*[@id='wrapper']/div/div/div/div/a/h4")
 	WebElement allsection;
 	
-	@FindBy(xpath=".//*[@id='home-top-slot']/div[1]/div/div[3]/div[1]/a[2]/h4")
+	//@FindBy(xpath="(//*[@class='overlay-button'])[2]")
+	@FindBy(xpath=".//*[@id='main']/div[5]/div[2]/div[2]/a/h3")
 	WebElement men;
 	
 	@FindBy(xpath="(//*[@class='dropdown-title'])[3]")
@@ -43,20 +45,23 @@ public class ProductPage extends TestBase{
 	
 	public void verifyProdHightolowprice() throws InterruptedException
 	{
-		//Actions a=new Actions(driver);
+		Actions a=new Actions(driver);
 		//a.doubleClick(men).build().perform();
+		//JavascriptExecutor js=(JavascriptExecutor)driver;
+		//js.executeScript("arguments[0].scrollIntoView();", men);
+		a.moveToElement(men);
 		men.click();
 		Thread.sleep(3000);
 		sortBy.click();
 		hightolow.click();
-		List<WebElement> allprice = driver.findElements(By.xpath("//*[@id='search-result-items']/li/div/div[4]/span[2]"));
+		List<WebElement> allprice = driver.findElements(By.xpath("//*[@id='search-result-items']/li/div/div[4]"));
 		System.out.print("printing all values"+allprice);
-		ArrayList<Integer> array=new ArrayList<Integer>();
+		ArrayList<Integer> array=new ArrayList<Integer>();////*[@id='search-result-items']/li
 		Iterator<WebElement> itr = allprice.iterator();
 		while(itr.hasNext())
 		{
 			String data = itr.next().getText();
-			System.out.print("printing each data"+data);
+			System.out.println(data);
 			if(data.contains("$"))
 			{
 				String actualdata = data.substring(1);
@@ -65,14 +70,26 @@ public class ProductPage extends TestBase{
 				array.add(productprice);
 			}
 		}
-		for(int i=0; i < array.size()-1 ; i++)
+		for(int i=0; i < array.size() -1 ; i++)
 		{
-			if(array.get(i) < array.get(i+1))
+			if(array.get(i) <= array.get(i+1))
 			{
 				System.out.println("obj.get(i)"+array.get(i));
 				System.out.println("obj.get(i+1)"+array.get(i+1));
-			}
+			}else {
 			Assert.assertTrue(false);
 		}
+		}
+	}
+	public void verifyProductPage()
+	{
+		Actions a=new Actions(driver);
+		//a.doubleClick(men).build().perform();
+		//JavascriptExecutor js=(JavascriptExecutor)driver;
+		//js.executeScript("arguments[0].scrollIntoView();", men);
+		a.moveToElement(men);
+		men.click();
+		
+		
 	}
 	}

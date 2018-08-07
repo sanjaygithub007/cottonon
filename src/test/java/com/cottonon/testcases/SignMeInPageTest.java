@@ -15,7 +15,7 @@ import com.cottonon.pages.SignMeInpage;
 import junit.framework.Assert;
 
 public class SignMeInPageTest extends TestBase{
-	
+
 	SignMeInpage signmeinpage;
 	public static final Logger log=Logger.getLogger(SignMeInPageTest.class.getName());
 	

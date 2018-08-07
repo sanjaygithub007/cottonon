@@ -1,4 +1,4 @@
-package com.cottonon.testcases;
+ package com.cottonon.testcases;
 
 import java.io.IOException;
 
@@ -15,24 +15,29 @@ import com.cottonon.pages.ProductPage;
 
 //@Listeners(Listener.class)
 public class ProductPageTest extends TestBase{
+
 	ProductPage productpage;
 	
 	@BeforeMethod
 	public void setUp() throws IOException {
 		init();
+		productpage=new ProductPage(driver);
 	}
+	
+	
 	@Test
 	public void validatefilter() throws IOException, InterruptedException
 	{
-		productpage=new ProductPage(driver);
 		productpage.verifyProdHightolowprice();
-		
 	}
+	
+	
+	
 	@AfterMethod
 	public void tearDown()
 	{
 		driver.quit();
 	}
+}
 	
 
-}

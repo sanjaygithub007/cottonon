@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Allbrowsers]" parallel="classes">
+  <test thread-count="5" name="BuildCompatibilityTest2(failed)" parallel="classes">
+    <parameter name="browser" value="ie"/>
+    <classes>
+      <class name="com.cottonon.testcases.SignMeInPageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="testLogin"/>
+        </methods>
+      </class> <!-- com.cottonon.testcases.SignMeInPageTest -->
+      <class name="com.cottonon.testcases.ProductPageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="validatefilter"/>
+        </methods>
+      </class> <!-- com.cottonon.testcases.ProductPageTest -->
+    </classes>
+  </test> <!-- BuildCompatibilityTest2(failed) -->
+  <test thread-count="5" name="BuildCompatibilityTest3(failed)" parallel="classes">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.cottonon.testcases.SignMeInPageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="testLogin"/>
+        </methods>
+      </class> <!-- com.cottonon.testcases.SignMeInPageTest -->
+      <class name="com.cottonon.testcases.ProductPageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="validatefilter"/>
+        </methods>
+      </class> <!-- com.cottonon.testcases.ProductPageTest -->
+    </classes>
+  </test> <!-- BuildCompatibilityTest3(failed) -->
+</suite> <!-- Failed suite [Allbrowsers] -->

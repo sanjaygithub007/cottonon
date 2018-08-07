@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Regression Suite]">
-  <test thread-count="5" name="Test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.cottonon.testcases.SignMeInPageTest">
+      <class name="com.cottonon.testcases.HomePageTest">
         <methods>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-          <include name="testLogin"/>
+          <include name="validatemoveableLink"/>
+          <include name="setup"/>
+          <include name="valiadtesearchbox"/>
+          <include name="validatemoveableLink2"/>
+          <include name="TearDown"/>
         </methods>
-      </class> <!-- com.cottonon.testcases.SignMeInPageTest -->
+      </class> <!-- com.cottonon.testcases.HomePageTest -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Regression Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

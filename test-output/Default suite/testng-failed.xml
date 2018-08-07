@@ -3,13 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.cottonon.testcases.SignMeInPageTest">
+      <class name="com.cottonon.testcases.HomePageTest">
         <methods>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-          <include name="testLogin"/>
+          <include name="validatemoveableLink"/>
+          <include name="setup"/>
+          <include name="valiadtesearchbox"/>
+          <include name="validatemoveableLink2"/>
+          <include name="TearDown"/>
         </methods>
-      </class> <!-- com.cottonon.testcases.SignMeInPageTest -->
+      </class> <!-- com.cottonon.testcases.HomePageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
